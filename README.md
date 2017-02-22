@@ -8,18 +8,10 @@ All the assets in this repository require Unity. Please follow the instructions 
 
 Instructions: Download the zip file, extract it and run the exectution file.
 
-Version 2, 2/07/17
+Version 2.1, 2/21/17
 
-[Linux](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58983558_beta-simulator-linux/beta-simulator-linux.zip)
-[Mac](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58983385_beta-simulator-mac/beta-simulator-mac.zip)
-[Windows](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58983318_beta-simulator-windows/beta-simulator-windows.zip)
-
-Version 1, 12/09/16
-
-[Linux](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5831f0f7_simulator-linux/simulator-linux.zip)
-[Mac](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5831f290_simulator-macos/simulator-macos.zip)
-[Windows 32](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5831f4b6_simulator-windows-32/simulator-windows-32.zip)
-[Windows 64](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5831f3a4_simulator-windows-64/simulator-windows-64.zip)
+[Linux](https://drive.google.com/open?id=0B106X2hCBrwuRUMyUkpGZ2lPQXc)
+[Mac](https://drive.google.com/open?id=0B106X2hCBrwudGtXUlJydUluVWc)
 
 ### Unity Simulator User Instructions
 
