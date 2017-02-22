@@ -5,18 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuOptions : MonoBehaviour
 {
-    private int track = 0;
+    private int track = 1;
     private Outline[] outlines;
 
     public void Start ()
     {
         outlines = GetComponentsInChildren<Outline>();
 		Debug.Log ("in menu script "+outlines.Length);
-		if (outlines.Length > 0) 
+		if (outlines.Length == 0) 
 		{
 			outlines [0].effectColor = new Color (0, 0, 0);
+		} else {
+			outlines [1].effectColor = new Color (0, 0, 0);
 		}
-    }
+	}
 
 	public void ControlMenu()
 	{
@@ -34,7 +36,7 @@ public class MenuOptions : MonoBehaviour
         if (track == 0) {
             SceneManager.LoadScene("LakeTrackTraining");
         } else {
-            SceneManager.LoadScene("JungleTrackTraining");
+            SceneManager.LoadScene("Thunderhill_train");
         }
 
     }
@@ -44,7 +46,7 @@ public class MenuOptions : MonoBehaviour
         if (track == 0) {
             SceneManager.LoadScene("LakeTrackAutonomous");
         } else {
-            SceneManager.LoadScene("JungleTrackAutonomous");
+            SceneManager.LoadScene("Thunderhill_autonomous");
         }
     }
 
@@ -55,7 +57,7 @@ public class MenuOptions : MonoBehaviour
         track = 0;
     }
 
-    public void SetMountainTrack()
+    public void SetThunderhillTrack()
     {
         track = 1;
         outlines [1].effectColor = new Color (0, 0, 0);
