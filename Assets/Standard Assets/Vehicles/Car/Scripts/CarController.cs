@@ -68,6 +68,9 @@ namespace UnityStandardAssets.Vehicles.Car
 		private Vector3 saved_position;
 		private Quaternion saved_rotation;
 
+		private const int k_OutputImageWidth = 1920;
+		private const int k_OutputImageHeight = 1200;
+
         public bool Skidding { get; private set; }
 
         public float BrakeInput { get; private set; }
@@ -498,9 +501,9 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private string WriteImage (Camera camera, string prepend, string timestamp)
         {
-            //needed to force camera update 
-            camera.Render();
-            RenderTexture targetTexture = camera.targetTexture;
+			RenderTexture targetTexture = new RenderTexture(k_OutputImageWidth, k_OutputImageHeight, 24);
+			camera.targetTexture = targetTexture;
+			camera.Render();
             RenderTexture.active = targetTexture;
             Texture2D texture2D = new Texture2D (targetTexture.width, targetTexture.height, TextureFormat.RGB24, false);
             texture2D.ReadPixels (new Rect (0, 0, targetTexture.width, targetTexture.height), 0, 0);
