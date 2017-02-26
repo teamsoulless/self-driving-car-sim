@@ -426,7 +426,20 @@ namespace UnityStandardAssets.Vehicles.Car
 				// Capture and Persist Image
 				string centerPath = WriteImage (CenterCamera, "center", sample.timeStamp);
 
-				string row = string.Format ("{0},{1},{2},{3},{4}\n", centerPath, sample.steeringAngle, sample.throttle, sample.brake, sample.speed);
+				var positionStr = string.Format ("{0}:{1}:{2}",
+					sample.position.x, sample.position.y, sample.position.z);
+				var rotationStr = string.Format ("{0}:{1}:{2}",                                                 
+					sample.rotation.eulerAngles.x, sample.rotation.eulerAngles.y, sample.rotation.eulerAngles.z);
+				
+				string row = string.Format ("{0},{1},{2},{3},{4},{5},{6}\n", 
+					centerPath, 
+					sample.steeringAngle, 
+					sample.throttle, 
+					sample.brake, 
+					sample.speed,
+					positionStr,
+					rotationStr
+					);
 				File.AppendAllText (Path.Combine (m_saveLocation, CSVFileName), row);
 			}
 			if (carSamples.Count > 0) {
