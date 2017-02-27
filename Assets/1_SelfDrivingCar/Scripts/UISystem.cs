@@ -10,6 +10,7 @@ public class UISystem : MonoSingleton<UISystem> {
     public string GoodCarStatusMessage;
     public string BadSCartatusMessage;
     public Text MPH_Text;
+	public Text POS_Text;
     public Image MPH_Animation;
     public Text Angle_Text;
     public Text RecordStatus_Text;
@@ -35,6 +36,8 @@ public class UISystem : MonoSingleton<UISystem> {
 		SaveStatus_Text.text = "";
 		SetAngleValue(0);
         SetMPHValue(0);
+		SetPosition(0, 0);
+
 		if (!isTraining) {
 			DriveStatus_Text.text = "Mode: Autonomous";
 			RecordDisabled.SetActive (true);
@@ -53,6 +56,11 @@ public class UISystem : MonoSingleton<UISystem> {
         //Do something with value for fill amounts
         MPH_Animation.fillAmount = value/topSpeed;
     }
+
+	public void SetPosition(float x, float y)
+	{
+		POS_Text.text = string.Format ("{0},{1}", x.ToString ("N2"), y.ToString ("N2")); 	
+	}
 
     public void ToggleRecording()
     {
@@ -82,6 +90,7 @@ public class UISystem : MonoSingleton<UISystem> {
     {
         SetMPHValue(carController.CurrentSpeed);
         SetAngleValue(carController.CurrentSteerAngle);
+		SetPosition (carController.transform.position.x, carController.transform.position.y);
     }
 
 	// Update is called once per frame
