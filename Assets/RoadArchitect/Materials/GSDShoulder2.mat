@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: GSDShoulder2
+  m_Shader: {fileID: 4800000, guid: 818846912fa069f42b9ef5d8eb0919f5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 2800000, guid: d6f48dc2cc239134d9c7e8de2cb1c5d3, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 444c23335598cb2438cb0a50043d148d, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ParallaxMap
+      second:
+        m_Texture: {fileID: 2800000, guid: 0aaf7a4f3c49d384dbc262b60d0bd031, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _OffsetY
+      second: 0.07
+    - first:
+        name: _Parallax
+      second: 0.011716418
+    - first:
+        name: _Shininess
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.8507463, g: 0.8507463, b: 0.8507463, a: 1}
+    - first:
+        name: _Emission
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _SpecColor
+      second: {r: 0, g: 0, b: 0, a: 1}

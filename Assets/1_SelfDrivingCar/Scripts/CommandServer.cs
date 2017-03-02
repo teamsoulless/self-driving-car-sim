@@ -67,8 +67,8 @@ public class CommandServer : MonoBehaviour
 
 				var positionStr = string.Format ("{0}:{1}:{2}",
 					                             _carController.transform.position.x,
-					                             _carController.transform.position.y,
-					                             _carController.transform.position.z);
+					                             _carController.transform.position.z,
+					                             _carController.transform.position.y);
 					
 				var rotationStr = string.Format ("{0}:{1}:{2}",
 					                              _carController.transform.rotation.eulerAngles.x,

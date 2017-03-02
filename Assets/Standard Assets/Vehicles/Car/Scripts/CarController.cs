@@ -427,7 +427,7 @@ namespace UnityStandardAssets.Vehicles.Car
 				string centerPath = WriteImage (CenterCamera, "center", sample.timeStamp);
 
 				var positionStr = string.Format ("{0}:{1}:{2}",
-					sample.position.x, sample.position.y, sample.position.z);
+					sample.position.x, sample.position.z, sample.position.y);
 				var rotationStr = string.Format ("{0}:{1}:{2}",                                                 
 					sample.rotation.eulerAngles.x, sample.rotation.eulerAngles.y, sample.rotation.eulerAngles.z);
 				

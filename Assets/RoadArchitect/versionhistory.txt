@@ -1,0 +1,36 @@
+1/15/2014 - New in version 1.2
+Added support for lightmapping (select static roads on each road)
+Added support for DX11
+Fixed pink road issue for DX11 (shader issue).
+Fixed tDATA error on web player.
+Fixed 50+ issues from 06/01/2014 to 01/15/2015.
+
+03/22/2014 - New in version 1.15
+New features:
+Added none option for intersection stop type.
+Implemented a more friendly way to programmatically create roads.
+Added an option to enable or disable mesh colliders on the entire road. On by default. If option is off the terrain / bridge will be the collider.
+Implemented lower intersection lane width minimum at 4m. Minimum road definition of 5m required at 4m. The road has to be as wide or wider than the road definition for intersections to work. 
+Added brick roads. Select from dropdown in inspector while road is selected. For best results use a custom parallax shader.
+Added stone roads. Select from dropdown in inspector while road is selected. For best results use a custom parallax shader.
+Added dirt roads. Select from dropdown in inspector while road is selected.
+Added new feature: Duplicate road. Clicking this button in a road's inspector window will add a new road and copy the settings of the currently selected road. After creation, the newly duplicated road will autoselect.
+Added a dropdown for selecting road types: Asphalt, dirt, brick and cobblestone. This dropdown is located in the inspector window of the road below "Use Default Materials". "Use Default Materials" must be checked in order to utilize this feature.
+Added very low poly railing option (Railing #9) for mobile
+Added automated intersection creation via c#. Email support@microgsd.com if needed usage.
+Added sidewalks. Do not work with intersections yet.
+
+Fixes:
+Fixed error caused by trying to use 0 materials on a road or intersection.
+Fixed error that prevented the physical material options from displaying.
+Fixed error where shoulder edges would go to height 0 if no terrain was present.
+Fixed issue when terrain heights were not at the standard base level 0. Road Architect now sets all terrain heights to 0 base.
+Fixed issue where gizmos would not render when road was created via code.
+Fixed issue relating to special nodes and T intersections when creating via code.
+Fixed a bug where some terrains might not be detected by a road during the build process.
+Fixed road flickering issue on mobile.
+Fixed several issues on Android and iPhones.
+Fixed most DirectX11 shader issues. Use shaders "GSD/DX11" when using DirectX11. In the future all renderers will only use one shader so no manual switching will be necessary.
+
+----------------------------------------------------
+Version 1.1 Released
