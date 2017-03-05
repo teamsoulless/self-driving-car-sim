@@ -52,6 +52,8 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private Camera LeftCamera;
         [SerializeField] private Camera RightCamera;
 
+        public static int resolution;
+
         private Quaternion[] m_WheelMeshLocalRotations;
         private Vector3 m_Prevpos, m_Pos;
         private float m_SteerAngle;
@@ -149,6 +151,16 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody> ();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl * m_FullTorqueOverAllWheels);
+
+            if (resolution == 1) {
+                CenterCamera.targetTexture = new RenderTexture(k_OutputImageWidth, k_OutputImageHeight, 24);
+                LeftCamera.targetTexture = new RenderTexture(k_OutputImageWidth, k_OutputImageHeight, 24);
+                RightCamera.targetTexture = new RenderTexture(k_OutputImageWidth, k_OutputImageHeight, 24);
+            } else {
+                CenterCamera.targetTexture = new RenderTexture(320, 160, 24);
+                LeftCamera.targetTexture = new RenderTexture(320, 160, 24);
+                RightCamera.targetTexture = new RenderTexture(320, 160, 24);
+            }
         }
 
         private void GearChanging ()
@@ -512,9 +524,10 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private string WriteImage (Camera camera, string prepend, string timestamp)
         {
-			RenderTexture targetTexture = new RenderTexture(k_OutputImageWidth, k_OutputImageHeight, 24);
-			camera.targetTexture = targetTexture;
-			camera.Render();
+            //RenderTexture targetTexture = new RenderTexture(k_OutputImageWidth, k_OutputImageHeight, 24);
+            //camera.targetTexture = targetTexture;
+            //camera.Render();
+            RenderTexture targetTexture = camera.targetTexture;
             RenderTexture.active = targetTexture;
             Texture2D texture2D = new Texture2D (targetTexture.width, targetTexture.height, TextureFormat.RGB24, false);
             texture2D.ReadPixels (new Rect (0, 0, targetTexture.width, targetTexture.height), 0, 0);

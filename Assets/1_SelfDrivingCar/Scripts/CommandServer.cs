@@ -8,7 +8,10 @@ using System.Security.AccessControl;
 
 public class CommandServer : MonoBehaviour
 {
-	public CarRemoteControl CarRemoteControl;
+    public const int k_OutputImageWidth = 1920;
+    public const int k_OutputImageHeight = 1200;
+
+    public CarRemoteControl CarRemoteControl;
 	public Camera FrontFacingCamera;
 	private SocketIOComponent _socket;
 	private CarController _carController;
@@ -21,10 +24,16 @@ public class CommandServer : MonoBehaviour
 		_socket.On ("steer", OnSteer);
 		_socket.On ("manual", onManual);
 		_carController = CarRemoteControl.GetComponent<CarController> ();
-	}
+        if (MenuOptions.resolution == 1)
+        {
+            FrontFacingCamera.targetTexture = new RenderTexture(k_OutputImageWidth, k_OutputImageHeight, 24);
+        } else {
+            FrontFacingCamera.targetTexture = new RenderTexture(320, 160, 24);
+        }
+    }
 
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void Update ()
 	{
 	}
 
