@@ -74,9 +74,9 @@ public class MenuOptions : MonoBehaviour
         resolution = 0;
     }
 
-    public void Set1920x1200()
+    public void Set1920x600()
     {
-        Debug.Log("set1920x1200");
+        Debug.Log("set1920x600");
         resolution = 1;
     }
 

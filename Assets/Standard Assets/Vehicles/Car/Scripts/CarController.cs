@@ -71,7 +71,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		private Quaternion saved_rotation;
 
 		private const int k_OutputImageWidth = 1920;
-		private const int k_OutputImageHeight = 1200;
+		private const int k_OutputImageHeight = 600;
 
         public bool Skidding { get; private set; }
 

@@ -2546,7 +2546,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: 320x160
       m_Image: {fileID: 0}
-    - m_Text: 1920x1200
+    - m_Text: 1920x600
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2563,7 +2563,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1789031428}
-        m_MethodName: Set1920x1200
+        m_MethodName: Set1920x600
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

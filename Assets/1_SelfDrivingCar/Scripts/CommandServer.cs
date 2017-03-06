@@ -9,7 +9,7 @@ using System.Security.AccessControl;
 public class CommandServer : MonoBehaviour
 {
     public const int k_OutputImageWidth = 1920;
-    public const int k_OutputImageHeight = 1200;
+    public const int k_OutputImageHeight = 600;
 
     public CarRemoteControl CarRemoteControl;
 	public Camera FrontFacingCamera;
