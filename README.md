@@ -30,3 +30,7 @@ Version 2.1, 2/21/17
 7. Building a new track. You can easily build a new track by using the prebuilt road prefabs located in Assets/RoadKit/Prefabs click and drag the road prefab pieces onto the editor, you can snap road pieces together easily by using vertex snapping by holding down "v" and dragging a road piece close to another piece.
 
 ![Self-Driving Car Simulator](./sim_image.png)
+
+["Kia Soul"](https://sketchfab.com/models/95f6b0ec50654c7099db3a34d2ce516f#) by [27films](https://sketchfab.com/271films) used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) / Use only body/shell on top of existing Unity Skycar chassis and update material to match Polysync Kia Soul from original.
+
+![Kia Soul Skycar](./kiasoul.JPG)
